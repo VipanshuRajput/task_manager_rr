@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/dm-sans/700.css";
+
+/* ---------- Base Theme ---------- */
+
+:root {
+  --background: 220 20% 97%;
+  --foreground: 220 25% 10%;
+  --card: 0 0% 100%;
+  --border: 220 15% 88%;
+  --radius: 0.75rem;
+
+  --priority-low-bg: 142 60% 95%;
+  --priority-low-border: 142 50% 85%;
+  --priority-medium-bg: 38 80% 95%;
+  --priority-medium-border: 38 70% 80%;
+  --priority-high-bg: 0 60% 96%;
+  --priority-high-border: 0 50% 85%;
+}
+
+/* ---------- Global Styles ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+/* ---------- Components ---------- */
+
+.card-elevated {
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.priority-low {
+  background: hsl(var(--priority-low-bg));
+  border: 1px solid hsl(var(--priority-low-border));
+}
+
+.priority-medium {
+  background: hsl(var(--priority-medium-bg));
+  border: 1px solid hsl(var(--priority-medium-border));
+}
+
+.priority-high {
+  background: hsl(var(--priority-high-bg));
+  border: 1px solid hsl(var(--priority-high-border));
+}
